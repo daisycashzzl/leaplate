@@ -11,8 +11,16 @@ import VueApollo from 'vue-apollo'
 import { createApolloClient } from './api/apollo'
 import { injectSupply } from 'vue-supply'
 import App from './ui/App.vue'
+// import ECharts from 'vue-echarts/components/ECharts'
 import routes from './routes'
 import storeOptions from './store'
+
+// import ECharts modules manually to reduce bundle size
+// import 'echarts/lib/chart/bar'
+// import 'echarts/lib/component/tooltip'
+
+// register component to use
+// Vue.component('v-chart', ECharts)
 
 function createApp (context) {
   const router = new VueRouter({
